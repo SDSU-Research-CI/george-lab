@@ -1,6 +1,6 @@
-This repository contain code and yaml for the Kaya Ecowise Lab for use on the TIDE cluster.
+This repository contains code and yaml for the George Lab for use on the TIDE cluster.
 
-**Namespace name:** sdsu-kaya-ecowise-lab
+**Namespace name:** sdsu-george-lab
 
 ## Shared Data
 
