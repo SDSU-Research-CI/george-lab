@@ -100,6 +100,10 @@ Now switch back to your browser and hit enter, or otherwise navigate to the URL 
 - *Note*: If you swapped out the default port in the previous step, you will need to make sure the port matches in the URL before entering it into your browser.
 - For example: `http://127.0.0.1:8889/lab?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXX`
 
+## MATLAB License
+You may need to register each job with the license server when the job is first scheduled. When you open up the MATLAB UI, click the middle tab to use the Network License Manager option.
+Enter `1701@metztli.sdsu.edu` and click submit.
+
 ## Shutdown / Cleanup
 
 When done, delete your JupyterLab Job:
