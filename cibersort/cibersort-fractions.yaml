@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cibersort-pod
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: nautilus.io/csu-tide
+            operator: Exists
+  tolerations:
+  - effect: NoSchedule
+    key: nautilus.io/csu-tide
+    operator: Exists
+  containers:
+  - name: cibersort
+    image: cibersortx/fractions
+    command: ["sleep", "3600"]
+    resources:
+      limits:
+        cpu: 4
+        memory: 16Gi
+      requests:
+        cpu: 4
+        memory: 16Gi
+    env:
+    - name: CIBERSORT_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: cibersort-token
+          key: token
+    volumeMounts:
+    - mountPath: /src/data
+      name: input
+    - mountPath: /src/outdir
+      name: output
+  volumes:
+  - name: input
+    persistentVolumeClaim:
+      claimName: cibersort-input
+  - name: output
+    persistentVolumeClaim:
+      claimName: cibersort-output
