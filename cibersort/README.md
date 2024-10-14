@@ -1,4 +1,4 @@
-# JupyterLab Job
+# Cibersort Job
 The following guide will walk users through scheduling and connecting to a CIBERSORT job on the TIDE cluster.
 
 This guide assumes that the user has completed the [Getting Access](https://sdsu-research-ci.github.io/softwarefactory/gettingaccess) directions and installed [Kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) on their local machine.
