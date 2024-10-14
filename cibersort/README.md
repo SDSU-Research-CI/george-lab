@@ -61,7 +61,6 @@ You can then run your code:
 
 ## Shutdown / Cleanup
 Optionally, transfer any files back to your local machine:
-Optionally, copy input files to the pod:
 ```
 kubectl -n sdsu-george-lab cp cibersort-pod:/src/data/[file] [path/to/local/file] 
 ```
